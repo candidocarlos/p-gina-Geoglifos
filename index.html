@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sistema de Denúncias - Instituto Geoglifos da Amazônia</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script defer src="static/js/denuncia.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="assets/Logo-Instituto.png" alt="Instituto Geoglifos">
+      </div>
+      <div class="nav-links">
+        <a href="https://geoglifos.org.br" target="_blank">Portal Institucional</a>
+        <a href="#denuncia" class="active">Fazer Denúncia</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="denuncia-page">
+    <div class="container">
+      <section class="denuncia-section" id="denuncia">
+        <h1>Sistema de Denúncias</h1>
+        <p class="denuncia-info">Ajude-nos a proteger os Geoglifos. Sua denúncia é importante para preservarmos nosso patrimônio histórico.</p>
+
+        <form id="denuncia-form" class="denuncia-form">
+          <div class="form-group">
+            <label for="tipo">Tipo de Ocorrência*</label>
+            <select name="tipo" id="tipo" required>
+              <option value="">Selecione o tipo de ocorrência</option>
+              <option value="dano">Dano ao sítio arqueológico</option>
+              <option value="invasao">Invasão da área</option>
+              <option value="construcao">Construção irregular</option>
+              <option value="desmatamento">Desmatamento</option>
+              <option value="outros">Outros</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="descricao">Descrição detalhada*</label>
+            <textarea name="descricao" id="descricao" required 
+              placeholder="Descreva em detalhes o que está acontecendo..."></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group half">
+              <label for="data">Data da Ocorrência*</label>
+              <input type="date" id="data" name="data" required>
+            </div>
+            <div class="form-group half">
+              <label for="hora">Hora (aproximada)</label>
+              <input type="time" id="hora" name="hora">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Localização*</label>
+            <div class="form-row">
+              <div class="form-group half">
+                <input name="latitude" type="text" id="latitude" 
+                  placeholder="Latitude" required>
+              </div>
+              <div class="form-group half">
+                <input name="longitude" type="text" id="longitude" 
+                  placeholder="Longitude" required>
+              </div>
+            </div>
+            <small class="location-help">
+              <i class="fas fa-map-marker-alt"></i> 
+              Clique no mapa para selecionar a localização
+            </small>
+          </div>
+
+          <div class="form-group">
+            <label class="file-upload">
+              <input type="file" name="fotos" id="fotos" multiple 
+                accept="image/*">
+              <span>
+                <i class="fas fa-camera"></i> 
+                Adicionar fotos ou vídeos (opcional)
+              </span>
+            </label>
+            <div id="preview-container" class="preview-container"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="nome">Seus Dados (opcional)</label>
+            <input type="text" id="nome" name="nome" 
+              placeholder="Seu nome">
+            <input type="email" id="email" name="email" 
+              placeholder="Seu e-mail para retorno">
+            <input type="tel" id="telefone" name="telefone" 
+              placeholder="Seu telefone">
+            <div class="anonymous-check">
+              <label>
+                <input type="checkbox" name="anonimo" id="anonimo">
+                Desejo fazer uma denúncia anônima
+              </label>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="submit-btn">
+              <span>Enviar Denúncia</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div class="contact-info">
+          <p><i class="fab fa-whatsapp"></i> (92) 99517-8291 | (92) 98265-1297</p>
+          <p><i class="far fa-envelope"></i> geoglifosdaamazonia@gmail.com</p>
+        </div>
+        <div class="copyright">
+          <p>Instituto Geoglifos da Amazônia © 2025. Todos os Direitos Reservados</p>
+          <p>CNPJ: 57.978.171/0001-07</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
